@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@+id/linkToMain"
+        android:title="Главгая"
+        android:icon="@drawable/baseline_pichome" />
+
+    <item android:id="@+id/linkToHistory"
+        android:title="История"
+        android:icon="@drawable/baseline_piclist" />
+
+    <item android:id="@+id/linkToReport"
+        android:title="Отчет"
+        android:icon="@drawable/baseline_picchart" />
+
+
+</menu>
