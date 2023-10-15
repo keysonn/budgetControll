@@ -51,9 +51,5 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(this, ChangeActivity::class.java)
             startActivity(intent)
         }
-
-        var icomes = Cells("Доходы", 0)
-        var wallets = Cells("Кошельки", 0)
-        var expenditures = Cells("Расходы", 0)
     }
 }

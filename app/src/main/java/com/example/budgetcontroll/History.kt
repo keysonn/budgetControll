@@ -5,12 +5,14 @@ import android.os.Binder
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.TextView
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.budgetcontroll.databinding.ActivityHistoryBinding
 import com.example.budgetcontroll.databinding.ActivityMainBinding
 
 class History : AppCompatActivity() {
 
     lateinit var binding: ActivityHistoryBinding
+    private val adapter = ChangesAdapter()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -36,6 +38,14 @@ class History : AppCompatActivity() {
                 }
             }
             true
+        }
+        init()
+    }
+
+    private fun init() {
+        binding.apply{
+            rcView.layoutManager = LinearLayoutManager(this@History)
+            rcView.adapter = adapter
         }
     }
 }

@@ -73,8 +73,8 @@
         android:layout_width="match_parent"
         android:layout_height="70dp"
         android:layout_marginTop="20dp"
-        android:text="Напишите: откуда, куда и сколько перести"
-        android:textSize="020sp"
+        android:text="Напишите: откуда, куда и сколько перевести"
+        android:textSize="019sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/textInputLayout" />

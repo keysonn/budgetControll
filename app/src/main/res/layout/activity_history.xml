@@ -17,21 +17,9 @@
         app:backgroundTint="#B5B5B5"
         app:menu="@menu/bottom_nav_menu" />
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rcView"
         android:layout_width="match_parent"
-        android:layout_height="652dp"
-        android:backgroundTint="@color/darkGray">
-
-        <TextView
-            android:id="@+id/textView3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="40dp"
-            android:text="ИСТОРИЯ"
-            android:textSize="24sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-    </androidx.constraintlayout.widget.ConstraintLayout>
+        android:layout_height="651dp" />
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
