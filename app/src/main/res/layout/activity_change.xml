@@ -4,18 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/darkGray"
+    android:backgroundTint="@color/darkGray"
     tools:context=".ChangeActivity">
-
-    <com.google.android.material.textfield.TextInputEditText
-        android:id="@+id/howMany"
-        android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:layout_marginTop="20dp"
-        android:hint="Сколько"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/where" />
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/textInputLayout"
@@ -31,30 +22,44 @@
         android:id="@+id/from"
         android:layout_width="match_parent"
         android:layout_height="60dp"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="24dp"
+        android:backgroundTint="@color/black"
         android:hint="Откуда"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView4" />
+        app:layout_constraintTop_toBottomOf="@+id/hint" />
 
     <com.google.android.material.textfield.TextInputEditText
         android:id="@+id/where"
         android:layout_width="match_parent"
         android:layout_height="60dp"
         android:layout_marginTop="20dp"
+        android:backgroundTint="@color/black"
         android:hint="Куда"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/from" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/howMany"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="@color/black"
+        android:hint="Сколько"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/where" />
 
     <Button
         android:id="@+id/toDoChange"
         android:layout_width="match_parent"
         android:layout_height="60dp"
         android:layout_marginTop="20dp"
-        android:backgroundTint="#03AFFF"
+        android:backgroundTint="@color/blue"
         android:text="Выполнить"
         android:textSize="20sp"
         android:textStyle="normal"
@@ -64,11 +69,11 @@
         app:layout_constraintTop_toBottomOf="@+id/howMany" />
 
     <TextView
-        android:id="@+id/textView4"
+        android:id="@+id/hint"
         android:layout_width="match_parent"
         android:layout_height="70dp"
         android:layout_marginTop="20dp"
-        android:text="Напишите откуда, куда и сколько перести"
+        android:text="Напишите: откуда, куда и сколько перести"
         android:textSize="020sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -79,10 +84,11 @@
         android:layout_width="match_parent"
         android:layout_height="60dp"
         android:layout_marginBottom="20dp"
-        android:backgroundTint="#03AFFF"
+        android:backgroundTint="@color/blue"
         android:text="Перейти на главную"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

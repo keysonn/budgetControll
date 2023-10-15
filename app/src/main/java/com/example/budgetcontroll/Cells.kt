@@ -1,8 +1,5 @@
 package com.example.budgetcontroll
 
-class Cells {
-    var cellsName: String? = null
-    var balance: Int? = null
-    //var balanceChangeHistory: //Массив
+class Cells(var cellsName: String?, var balance: Int?) {
 
 }

@@ -1,12 +1,9 @@
 package com.example.budgetcontroll
 
-import android.content.ClipData.Item
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.MenuItem
 import android.widget.Button
-import android.widget.TextView
 import com.example.budgetcontroll.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
@@ -54,5 +51,9 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(this, ChangeActivity::class.java)
             startActivity(intent)
         }
+
+        var icomes = Cells("Доходы", 0)
+        var wallets = Cells("Кошельки", 0)
+        var expenditures = Cells("Расходы", 0)
     }
 }
