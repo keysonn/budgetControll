@@ -2,7 +2,7 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item android:id="@+id/linkToMain"
-        android:title="Главгая"
+        android:title="Главная"
         android:icon="@drawable/baseline_pichome" />
 
     <item android:id="@+id/linkToHistory"

@@ -5,6 +5,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.MenuItem
+import android.widget.Button
 import android.widget.TextView
 import com.example.budgetcontroll.databinding.ActivityMainBinding
 
@@ -36,6 +37,22 @@ class MainActivity : AppCompatActivity() {
                 }
             }
             true
+        }
+
+        val linkToChange1: Button = findViewById(R.id.linkToChange1)
+        linkToChange1.setOnClickListener{
+            val intent = Intent(this, ChangeActivity::class.java)
+            startActivity(intent)
+        }
+        val linkToChange2: Button = findViewById(R.id.linkToChange2)
+        linkToChange2.setOnClickListener{
+            val intent = Intent(this, ChangeActivity::class.java)
+            startActivity(intent)
+        }
+        val linkToChange3: Button = findViewById(R.id.linkToChange3)
+        linkToChange3.setOnClickListener{
+            val intent = Intent(this, ChangeActivity::class.java)
+            startActivity(intent)
         }
     }
 }
