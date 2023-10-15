@@ -1,18 +1,19 @@
 package com.example.budgetcontroll
 
 import android.content.Intent
-import android.os.Binder
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.TextView
+import androidx.activity.result.ActivityResultLauncher
+import androidx.activity.result.contract.ActivityResultContracts
+import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.budgetcontroll.databinding.ActivityHistoryBinding
-import com.example.budgetcontroll.databinding.ActivityMainBinding
 
 class History : AppCompatActivity() {
 
     lateinit var binding: ActivityHistoryBinding
     private val adapter = ChangesAdapter()
+    private var editLauncher: ActivityResultLauncher<Intent>? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -40,12 +41,20 @@ class History : AppCompatActivity() {
             true
         }
         init()
+        editLauncher = registerForActivityResult(ActivityResultContracts.StartActivityForResult()){
+            if (it.resultCode == RESULT_OK) {
+                adapter.addChange(it.data?.getSerializableExtra("change") as ChangesHistory)
+            }
+        }
     }
 
     private fun init() {
         binding.apply{
-            rcView.layoutManager = LinearLayoutManager(this@History)
+            rcView.layoutManager =GridLayoutManager(this@History, 3)
             rcView.adapter = adapter
+            bAdd.setOnClickListener{
+                editLauncher?.launch(Intent(this@History, ChangeActivity::class.java))
+            }
         }
     }
 }

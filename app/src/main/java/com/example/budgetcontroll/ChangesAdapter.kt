@@ -8,11 +8,11 @@ import com.example.budgetcontroll.databinding.ChangeItemBinding
 
 class ChangesAdapter: RecyclerView.Adapter<ChangesAdapter.ChangesHolder>() {
 
-    val changesList = ArrayList<ChagnesHistory>()
+    val changesList = ArrayList<ChangesHistory>()
 
     class ChangesHolder(item: View): RecyclerView.ViewHolder(item) {
         val binding = ChangeItemBinding.bind(item)
-        fun bind(changes: ChagnesHistory) = with(binding){
+        fun bind(changes: ChangesHistory) = with(binding){
             fromCell.text = changes.from
             whereCell.text= changes.where
             change.text = changes.change.toString()
@@ -32,7 +32,7 @@ class ChangesAdapter: RecyclerView.Adapter<ChangesAdapter.ChangesHolder>() {
         return changesList.size
     }
 
-    fun addChange(changes: ChagnesHistory){
+    fun addChange(changes: ChangesHistory){
         changesList.add(changes)
         notifyDataSetChanged()
     }
